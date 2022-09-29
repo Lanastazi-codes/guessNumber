@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header" id="header">
+        <!-- game -->
+        <div class="game-container">
+
+            <div class="number-wrapper">
+                <h1 id="number">Guess the number</h1>
+            </div>
+            <fieldset>
+                <input type="number" class="users-input" name="input">
+                <button class="submit-btn" type="submit">
+                    Submit
+                </button>
+            </fieldset>
+            <fieldset>
+                <button class="generate-btn" type="submit" onclick="numberGenerator(10)">
+                    START
+                </button>
+            </fieldset>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
