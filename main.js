@@ -8,25 +8,26 @@ let submitBtn = document.querySelector(".submit-btn");
 function numberGenerator(x) {
     computerNumber.innerHTML = "Write your guess🤔";
     randomNumber = Math.ceil(Math.random() * x);
+    console.log(randomNumber);
 
     function numberComparison() {
 
         let usersGues = userInput.value;
         if (randomNumber < usersGues) {
-            confirm("менше😉");
-
+            computerNumber.innerHTML = "менше😉";
         }else if (randomNumber > usersGues) {
-            confirm("більше😏");
-
+            computerNumber.innerHTML = "більше😏";
         }else{
-            confirm("Ти виграв!!!🤩😎🎉");
-            numberGenerator(x);
+            userWon()
         }
+        
     }
 
     submitBtn.addEventListener("click", numberComparison);
 }
 
-
+function userWon() {
+    computerNumber.innerHTML = "Ти виграв!!!🤩😎🎉";
+}
 
 
