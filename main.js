@@ -14,11 +14,9 @@ function numberGenerator(x) {
         let usersGues = userInput.value;
         if (randomNumber < usersGues) {
             confirm("менше😉");
-            return false;
 
         }else if (randomNumber > usersGues) {
             confirm("більше😏");
-            return false;
 
         }else{
             confirm("Ти виграв!!!🤩😎🎉");
