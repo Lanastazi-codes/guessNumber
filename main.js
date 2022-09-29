@@ -4,13 +4,17 @@ let generatorBtn = document.querySelector(".generate-btn");
 let userInput = document.querySelector(".users-input");
 let submitBtn = document.querySelector(".submit-btn");
 
+let randomNumber = false;
 
 function numberGenerator(x) {
     computerNumber.innerHTML = "Впиши здогадку🤔";
     randomNumber = Math.ceil(Math.random() * x);
     console.log(randomNumber);
 
-    function numberComparison() {
+    submitBtn.addEventListener("click", numberComparison);
+}
+
+function numberComparison() {
 
         let usersGues = userInput.value;
         if (randomNumber < usersGues) {
@@ -22,9 +26,6 @@ function numberGenerator(x) {
         }
         
     }
-
-    submitBtn.addEventListener("click", numberComparison);
-}
 
 function userWon() {
     computerNumber.innerHTML = "Ти виграв!!!🤩😎🎉";
