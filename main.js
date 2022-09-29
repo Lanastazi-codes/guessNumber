@@ -6,7 +6,7 @@ let submitBtn = document.querySelector(".submit-btn");
 
 
 function numberGenerator(x) {
-    computerNumber.innerHTML = "Write your guess🤔";
+    computerNumber.innerHTML = "Впиши здогадку🤔";
     randomNumber = Math.ceil(Math.random() * x);
     console.log(randomNumber);
 
